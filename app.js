@@ -11,6 +11,7 @@ function fireEvents() {
   for (let i = 0; i < stars.length; i++) {
     stars[i].addEventListener("mouseenter", mouseFill);
     stars[i].addEventListener("click", remover);
+    stars[i].addEventListener('touchstart', mouseFill)
   }
 }
 // Lanzamiento listener fuera del star-container
