@@ -1,0 +1,1 @@
+[Demo](https://alzca1.github.io/stars-rating/index.html)
