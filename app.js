@@ -8,11 +8,11 @@ var clicked = false;
 
 // Lanzamiento de Event Listeners
 function fireEvents() {
-  for (let i = 0; i < stars.length; i++) {
-    stars[i].addEventListener("mouseenter", mouseFill);
-    stars[i].addEventListener("click", remover);
-    stars[i].addEventListener('touchstart', mouseFill)
-  }
+  stars.forEach(star => {
+    star.addEventListener("mouseenter", mouseFill);
+    star.addEventListener("click", remover);
+    star.addEventListener("touchstart", mouseFill);
+  });
 }
 // Lanzamiento listener fuera del star-container
 document.addEventListener("click", function(event) {
@@ -28,9 +28,8 @@ function reset() {
   mouseOvers = [0];
   clickEvents = [];
   clicked = false;
-  for (let i = 0; i < stars.length; i++) {
-    stars[i].classList.remove("fill");
-  }
+
+  stars.forEach(star => star.classList.remove("fill"));
   fireEvents();
 }
 
